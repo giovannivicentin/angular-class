@@ -14,5 +14,5 @@ import { CepSearchComponent } from "./cep-search/cep-search.component";
   styles: [],
 })
 export class AppComponent {
-  title = "conversor-simples";
+  title = "Consulta-CEP";
 }
