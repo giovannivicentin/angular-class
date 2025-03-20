@@ -1,16 +1,18 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from "@angular/core";
+import { RouterOutlet } from "@angular/router";
+import { HttpClientModule } from "@angular/common/http";
+import { CepSearchComponent } from "./cep-search/cep-search.component";
 
 @Component({
-  selector: 'app-root',
-  imports: [RouterOutlet],
+  selector: "app-root",
+  standalone: true,
+  imports: [RouterOutlet, CepSearchComponent, HttpClientModule],
   template: `
-    <h1>Welcome to {{title}}!</h1>
-
-    <router-outlet />
+    <app-cep-search></app-cep-search>
+    <router-outlet></router-outlet>
   `,
   styles: [],
 })
 export class AppComponent {
-  title = 'conversor-simples';
+  title = "conversor-simples";
 }

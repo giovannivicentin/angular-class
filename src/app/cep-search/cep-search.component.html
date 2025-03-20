@@ -1,0 +1,25 @@
+<div class="container">
+  <h1>Consulta de CEP</h1>
+  <div class="form-group">
+    <input
+      [(ngModel)]="cepInput"
+      placeholder="Digite o CEP"
+      class="cep-input"
+    />
+    <button (click)="onSearch()" class="btn-search">Buscar</button>
+  </div>
+  <div *ngIf="errorMessage" class="error">
+    {{ errorMessage }}
+  </div>
+  <div *ngIf="cepResult" class="result">
+    <h2>Resultado:</h2>
+    <ul>
+      <li><strong>CEP:</strong> {{ cepResult.cep }}</li>
+      <li><strong>Logradouro:</strong> {{ cepResult.logradouro }}</li>
+      <li><strong>Complemento:</strong> {{ cepResult.complemento }}</li>
+      <li><strong>Bairro:</strong> {{ cepResult.bairro }}</li>
+      <li><strong>Cidade:</strong> {{ cepResult.localidade }}</li>
+      <li><strong>Estado:</strong> {{ cepResult.uf }}</li>
+    </ul>
+  </div>
+</div>
